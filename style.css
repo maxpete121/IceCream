@@ -1,0 +1,22 @@
+
+.mainCart{
+    height: 330px;
+}
+
+.iceCreamCard {
+    padding: 10px;
+    background-color: gray;
+    display: flex;
+}
+
+.buyCard {
+    padding: 10px;
+    background-color: rgba(0, 0, 255, 0.655);
+    border-radius: 15px;
+}
+
+.imgCard {
+    height: 170px;
+    width: 250px;
+    border-radius: 15px;
+}
