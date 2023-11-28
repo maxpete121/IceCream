@@ -43,7 +43,7 @@ function updateCart() {
     iceCream.forEach(ice => {
         if(ice.quantity > 0) {
             console.log('up')
-            template += `                <span class="bg-dark-subtle d-flex justify-content-evenly mb-2 align-items-center rounded-2">
+            template += `                <span class="iceCreamCard d-flex justify-content-evenly mb-2 align-items-center rounded-2">
             <p>${ice.name}</p>
             <p>${ice.quantity}</p>
             <p>${ice.price}</p>
@@ -54,7 +54,7 @@ function updateCart() {
     } )
     toppings.forEach(topB => {
         if(topB.quantity > 0) {
-            template += `<span class="bg-dark-subtle d-flex justify-content-evenly mb-2 align-items-center rounded-2">
+            template += `<span class="iceCreamCard d-flex justify-content-evenly mb-2 align-items-center rounded-2">
             <p>${topB.name}</p>
             <p>${topB.quantity}</p>
             <p>${topB.price}</p>
@@ -101,4 +101,27 @@ function deleteIce(itemname) {
     Iremove.quantity--
     updateCart()
 }
+
+function checkout(deleteAll) {
+    let dAll = iceCream.forEach(iceCream => {
+        if(iceCream.quantity > 0) {
+            iceCream.quantity = 0
+        }
+    })
+    let dallT = toppings.forEach(toppings => {
+        if(toppings.quantity > 0) {
+            toppings.quantity = 0
+        }
+    })
+    updateCart()
+}
+
+// function checkout(deleteAllTop) {
+//     let dallT = toppings.forEach(toppings => {
+//         if(toppings.quantity > 0) {
+//             toppings.quantity = 0
+//         }
+//     })
+//     updateCart()
+// }
 
